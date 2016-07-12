@@ -22,19 +22,19 @@
           <table>
             <tr>
               <td>Bob isst gern bananen </td>
-              <td><input type="checkbox" name="check1" value="1" required><br></td>
+              <td><input type="checkbox" name="check1" value="1"><br></td>
             </tr>
             <tr>
               <td>Alle Bandmitglieder mögen bananen </td>
-              <td><input type="checkbox" name="check2" value="1" required><br></td>
+              <td><input type="checkbox" name="check2" value="1"><br></td>
             </tr>
             <tr>
               <td>Alle hassen Bananen </td>
-              <td><input type="checkbox" name="check3" value="1" required><br></td>
+              <td><input type="checkbox" name="check3" value="1"><br></td>
             </tr>
             <tr>
               <td>Bob hat 2 bananen </td>
-              <td><input type="checkbox" name="check4" value="1" required><br></td>
+              <td><input type="checkbox" name="check4" value="1"><br></td>
             </tr>
             <tr>
               <td><input class="button" type="submit" name="continue" value="Weiter"></td>
@@ -74,8 +74,11 @@
           else {
             $_SESSION['check4'] = 0;
           }
+          echo "<br>";
+          echo $_SESSION['check1'] . "<br>" . $_SESSION['check2'] . "<br>";
+          echo $_SESSION['check3'] . "<br>" . $_SESSION['check4'] . "<br>";
 
-          header("Location:form4.php");
+          //header("Location:form4.php");
           }
        ?>
 
