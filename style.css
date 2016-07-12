@@ -1,0 +1,23 @@
+html {
+  font-family: 'Roboto', sans-serif;
+  background-color: #E0F2F1;
+}
+
+.form-box {
+  border-left: 6px solid #004D40;
+  background-color: #B2DFDB;
+  padding: 5px;
+  display: inline-block;
+  border-radius: 0px 15px 15px 0px;
+}
+
+.button {
+  background-color: #1DE9B6;
+  border-radius: 5px 5px 5px 5px;
+  border: 1px solid #004D40;
+  font-size: 15px;
+}
+
+.button:active {
+  background-color: #00BFA5;
+}
