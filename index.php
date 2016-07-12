@@ -38,7 +38,6 @@
           $_SESSION['vname'] = $_POST['vname'];
           $_SESSION['name'] = $_POST['name'];
           $_SESSION['mail'] = $_POST['mail'];
-          echo $_SESSION['vname'];
           header("Location:form2.php");
           }
 

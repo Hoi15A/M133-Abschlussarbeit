@@ -19,7 +19,24 @@
           Welches Instrument spielt unser Gründungsmitglied Gusti?
         </p>
         <form method="post">
-
+          <table>
+            <tr>
+              <td>Triangel </td>
+              <td><input type="radio" name="instrument" value="1" required><br></td>
+            </tr>
+            <tr>
+              <td>Dudelsack </td>
+              <td><input type="radio" name="instrument" value="2" required><br></td>
+            </tr>
+            <tr>
+              <td>Airhorn </td>
+              <td><input type="radio" name="instrument" value="3" required><br></td>
+            </tr>
+            <tr>
+              <td><input class="button" type="submit" name="empty" value="Leeren" formnovalidate></td>
+              <td><input class="button" type="submit" name="continue" value="Weiter"></td>
+            </tr>
+          </table>
         </form>
       </div>
 
