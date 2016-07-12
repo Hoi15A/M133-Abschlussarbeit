@@ -74,11 +74,8 @@
           else {
             $_SESSION['check4'] = 0;
           }
-          echo "<br>";
-          echo $_SESSION['check1'] . "<br>" . $_SESSION['check2'] . "<br>";
-          echo $_SESSION['check3'] . "<br>" . $_SESSION['check4'] . "<br>";
 
-          //header("Location:form4.php");
+          header("Location:form5.php");
           }
        ?>
 
