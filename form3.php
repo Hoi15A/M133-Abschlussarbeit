@@ -41,10 +41,9 @@
       </div>
 
       <?php
-        echo $_SESSION['instrument'];
         if (isset($_POST['continue'])) {
           $_SESSION['members'] = $_POST['members'];
-          header("Location:form3.php");
+          header("Location:form4.php");
           }
        ?>
 
