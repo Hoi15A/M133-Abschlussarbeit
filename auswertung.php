@@ -70,12 +70,24 @@
           </tr>
         </table>
         <hr>
+        <form method="post">
+          <table>
+            <tr>
+              <td><input class="button" type="submit" name="empty" value="Leeren" formnovalidate></td>
+              <td><input class="button" type="submit" name="continue" value="Weiter"></td>
+            </tr>
+          </table>
+        </form>
       </div>
 
       <?php
         if (isset($_POST['continue'])) {
-          $_SESSION['ageGuess'] = $_POST['ageGuess'];
-          header("Location:auswertung.php");
+            header("Location:save.php");
+          }
+
+          if (isset($_POST['empty'])) {
+            session_unset();
+            header("Location:index.php");
           }
        ?>
 

@@ -21,19 +21,19 @@
         <form method="post">
           <table>
             <tr>
-              <td>Bob isst gern bananen </td>
+              <td>One </td>
               <td><input type="checkbox" name="check1" value="1"><br></td>
             </tr>
             <tr>
-              <td>Alle Bandmitglieder mögen bananen </td>
+              <td>Two </td>
               <td><input type="checkbox" name="check2" value="1"><br></td>
             </tr>
             <tr>
-              <td>Alle hassen Bananen </td>
+              <td>Three </td>
               <td><input type="checkbox" name="check3" value="1"><br></td>
             </tr>
             <tr>
-              <td>Bob hat 2 bananen </td>
+              <td>Four </td>
               <td><input type="checkbox" name="check4" value="1"><br></td>
             </tr>
             <tr>
