@@ -16,7 +16,7 @@
       <div class="form-box">
         <p>
           So <?php echo $_SESSION['vname']; ?>, zum Schluss noch eine Schätzfrage:<br>
-          Was trifft zu?
+          Wie Alt sind alle Mitglieder zusammen?
         </p>
         <form method="post">
           <table>

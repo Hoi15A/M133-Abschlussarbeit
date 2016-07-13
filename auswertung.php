@@ -73,7 +73,7 @@
         <form method="post">
           <table>
             <tr>
-              <td><input class="button" type="submit" name="empty" value="Leeren" formnovalidate></td>
+              <td><input class="button" type="submit" name="empty" value="Leeren"></td>
               <td><input class="button" type="submit" name="continue" value="Weiter"></td>
             </tr>
           </table>

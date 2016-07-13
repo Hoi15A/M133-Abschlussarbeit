@@ -24,9 +24,10 @@
 
         // Check connection
         if ($conn->connect_error) {
-          die("Connection failed: " . $conn->connect_error);
+          //die("Connection failed: " . $conn->connect_error);
+          die("Da hat leider etwas nicht geklappt.<br>Bitte versuche es später nochmals.<br>");
         }
-        echo "Connected successfully<br>";
+        //echo "Connected successfully<br>";
 
         $vname = $_SESSION['vname'];
         $name = $_SESSION['name'];
@@ -42,13 +43,21 @@
         $sql = "INSERT INTO wettbewerb (vname, name, mail, instrument, members, check1, check2, check3, check4, ageGuess) VALUES ('$vname', '$name', '$mail', '$instrument', '$members', '$check1', '$check2', '$check3', '$check4', '$ageGuess')";
 
         if ($conn->query($sql) === TRUE) {
-            echo "New record created successfully";
+            echo "Danke für deine Teilnahme, " . $_SESSION['vname'] . ". <br>Die Gewinner werden per Email benachrichtigt. Auf bald!<br>";
         } else {
-            echo "Error: " . $sql . "<br>" . $conn->error;
+            //echo "Error: " . $sql . "<br>" . $conn->error;
+            echo "Da hat leider etwas nicht geklappt.<br>Bitte versuche es später nochmals.<br>";
         }
 
+        echo '<form method="post"><input class="button" type="submit" name="toHome" value="Zur DoppelKlang Homepage"></form>';
+        $conn->close();
+        if (isset($_POST['toHome'])) {
 
+            session_unset();
+            header("Location:index.php");
+          }
          ?>
+
       </div>
 
   </body>
