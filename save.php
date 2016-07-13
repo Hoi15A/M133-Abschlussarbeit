@@ -49,13 +49,9 @@
             echo "Da hat leider etwas nicht geklappt.<br>Bitte versuche es später nochmals.<br>";
         }
 
-        echo '<form method="post"><input class="button" type="submit" name="toHome" value="Zur DoppelKlang Homepage"></form>';
+        echo '<form action="index.php"><input class="button" type="submit" name="toHome" value="Zur DoppelKlang Homepage"></form>';
         $conn->close();
-        if (isset($_POST['toHome'])) {
 
-            session_unset();
-            header("Location:index.php");
-          }
          ?>
 
       </div>

@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Wettbewerb - Auswertung</title>
+    <title>Wettbewerb - Adminbereich</title>
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="../style.css" type="text/css">
   </head>
@@ -31,7 +31,7 @@
         }
 
         if (isset($_POST['auswerten'])) {
-          header("Location:index.php");
+          header("Location:auswerten.php");
         }
        ?>
 

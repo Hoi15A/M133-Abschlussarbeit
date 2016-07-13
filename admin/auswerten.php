@@ -16,7 +16,7 @@
     <h1>40 Jahre DoppelKlang - Wettbewerb</h1>
       <div class="form-box">
         <h2>Adminbereich</h2>
-        <h3>Alle Teilnehmer</h3>
+        <h3>Richtige Antworten</h3>
         <form method="post">
           <input class="button" type="submit" name="toAdmin" value="Zurück">
         </form>
@@ -40,7 +40,7 @@
         //echo "Connected successfully<br>";
 
 
-        $sql = "SELECT * FROM wettbewerb ORDER BY time DESC";
+        $sql = "SELECT *, abs(ageGuess - 122) as distance_from_test FROM wettbewerb WHERE instrument = '1' AND members = '3' AND check1 = '0' AND check2 = '1' AND check3 = '0' AND check4 = '1' order by distance_from_test";
         $result = $conn->query($sql);
 
 
