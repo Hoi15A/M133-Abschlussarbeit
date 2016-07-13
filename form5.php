@@ -32,7 +32,7 @@
 
       <?php
         if (isset($_POST['continue'])) {
-          $_SESSION['ageGuess'] = $_POST['ageGuess'];
+          $_SESSION['ageGuess'] = htmlentities($_POST['ageGuess']);
           header("Location:auswertung.php");
           }
        ?>

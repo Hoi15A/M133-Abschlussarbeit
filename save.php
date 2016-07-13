@@ -40,9 +40,13 @@
         $check4 = $_SESSION['check4'];
         $ageGuess = $_SESSION['ageGuess'];
 
-        $sql = "INSERT INTO wettbewerb (vname, name, mail, instrument, members, check1, check2, check3, check4, ageGuess) VALUES ('$vname', '$name', '$mail', '$instrument', '$members', '$check1', '$check2', '$check3', '$check4', '$ageGuess')";
+        //$sql = "INSERT INTO wettbewerb (vname, name, mail, instrument, members, check1, check2, check3, check4, ageGuess) VALUES ('$vname', '$name', '$mail', '$instrument', '$members', '$check1', '$check2', '$check3', '$check4', '$ageGuess')";
+        $stmt = $conn->prepare("INSERT INTO wettbewerb (vname, name, mail, instrument, members, check1, check2, check3, check4, ageGuess)
+    		VALUES (?,?,?,?,?,?,?,?,?,?)");
+    		$stmt->bind_param("sssiiiiiii", $vname, $name, $mail, $instrument, $members, $check1, $check2, $check3, $check4, $ageGuess);
 
-        if ($conn->query($sql) === TRUE) {
+        //$conn->query($sql) === TRUE
+        if ($stmt->execute()) {
             echo "Danke für deine Teilnahme, " . $_SESSION['vname'] . ". <br>Die Gewinner werden per Email benachrichtigt. Auf bald!<br>";
         } else {
             //echo "Error: " . $sql . "<br>" . $conn->error;

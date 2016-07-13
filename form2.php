@@ -42,7 +42,7 @@
 
       <?php
         if (isset($_POST['continue'])) {
-          $_SESSION['instrument'] = $_POST['instrument'];
+          $_SESSION['instrument'] = htmlentities($_POST['instrument']);
           header("Location:form3.php");
           }
        ?>

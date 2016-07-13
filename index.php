@@ -35,9 +35,9 @@
         session_start();
 
         if (isset($_POST['continue'])) {
-          $_SESSION['vname'] = $_POST['vname'];
-          $_SESSION['name'] = $_POST['name'];
-          $_SESSION['mail'] = $_POST['mail'];
+          $_SESSION['vname'] = htmlentities($_POST['vname']);
+          $_SESSION['name'] = htmlentities($_POST['name']);
+          $_SESSION['mail'] = htmlentities($_POST['mail']);
           header("Location:form2.php");
           }
 
