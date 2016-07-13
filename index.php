@@ -24,7 +24,7 @@
               <td><input type="email" name="mail" maxlength="50" required><br></td>
             </tr>
             <tr>
-              <td><input class="button" type="submit" name="empty" value="Leeren" formnovalidate></td>
+              <td><input class="button" type="reset" name="empty" value="Leeren"></td>
               <td><input class="button" type="submit" name="continue" value="Weiter"></td>
             </tr>
           </table>
@@ -41,9 +41,6 @@
           header("Location:form2.php");
           }
 
-        if (isset($_POST['empty'])) {
-          session_unset();
-        }
 
        ?>
 
