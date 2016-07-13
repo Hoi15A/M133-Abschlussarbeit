@@ -13,15 +13,15 @@
           <table>
             <tr>
               <td>Vorname: </td>
-              <td><input type="text" name="vname" required><br></td>
+              <td><input type="text" name="vname" maxlength="50" required><br></td>
             </tr>
             <tr>
               <td>Nachname: </td>
-              <td><input type="text" name="name" required><br></td>
+              <td><input type="text" name="name" maxlength="50" required><br></td>
             </tr>
             <tr>
               <td>Email: </td>
-              <td><input type="email" name="mail" required><br></td>
+              <td><input type="email" name="mail" maxlength="50" required><br></td>
             </tr>
             <tr>
               <td><input class="button" type="submit" name="empty" value="Leeren" formnovalidate></td>
